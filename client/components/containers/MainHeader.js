@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Header = styled.div`
+const MainHeader = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
-  height: 42px;
+  height: 130px;
+  padding: 27px;
   width: 100%;
-  background-color: ${props => props.color1};
+  background-color: #1E7BD8;
   color: white;
 `;
 
-export default Header;
+export default MainHeader;

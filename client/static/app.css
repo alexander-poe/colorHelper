@@ -1,1 +1,18 @@
-/* Put CSS rules here */
+label {
+  margin: 10px;
+}
+
+.iphoneMockUp {
+  height: 700px;
+  width: auto;
+}
+
+.headIcon {
+  margin: 10px;
+  padding: 5px;
+}
+
+.logo {
+  height: 50%;
+  width: 21%;
+}
