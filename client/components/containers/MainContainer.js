@@ -3,8 +3,12 @@ import styled from 'styled-components';
 
 const MainContainer = styled.div`
   display: flex;
-  height: 800px;
-  width: 100%;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 31.8%;
+  margin-left: 15.2%;
+  height: 471px;
+  width: 73.6%;
   background-color: ${props => props.color};
 `;
 

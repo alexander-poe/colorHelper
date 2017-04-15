@@ -1,14 +1,4 @@
-The Intention of this repo is to create a codebase of reusable components
-to later be bootstrapped in to react apps.
 
-Components
-
-## Containers
-
--main container
--sidebar
--header
--footer
 
 
 

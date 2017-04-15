@@ -1,1 +1,8 @@
-/* Put CSS rules here */
+.iphoneMockUp {
+  height: 700px;
+  width: auto;
+}
+
+.headIcon {
+  margin: 10px;
+}
