@@ -22,11 +22,10 @@ class MainComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      header: '#1E7BD8',
-      mainContainer: '#F8E3B6',
-      sideBar: '#196C8C',
-      footer: '#D82F4E',
-      textColor: '#E98C7D',
+      header: '#37d5d8',
+      mainContainer: '#64f8f1',
+      footer: '#873447',
+      textColor: '#000000',
       iconColor: '#fff'
     };
     this.header = this.header.bind(this);
@@ -60,7 +59,7 @@ class MainComponent extends React.Component {
 		return (
 			<div>
         <MainHeader color1={this.state.header}>
-
+          <img className="logo" src="./logo.png" />
         </MainHeader>
         <OuterContainer>
           <ImageContainer>
