@@ -15,6 +15,14 @@ import Title from './components/text/Title';
 import BasicSignUp from './components/inputs/basicSignUp';
 import NewPaula from './new-paula';
 import Footer from './components/containers/Footer';
+import Footer1 from './components/containers/Footer1';
+import Product1Main from './components/containers/Product1Main';
+import Header1 from './components/containers/header1';
+import StatusBar from './components/containers/widgets/statusBar';
+
+
+import MockUp1 from './components/mockups/MockUp1';
+import MockUp2 from './components/mockups/MockUp2';
 
 
 
@@ -63,30 +71,30 @@ class MainComponent extends React.Component {
         </MainHeader>
         <OuterContainer>
           <ImageContainer>
-            <MainContainer color={this.state.mainContainer}>
-              <Header color1={this.state.header}>
-                <i
-                  className="fa fa-user-circle headIcon"
-                  style={{color: this.state.iconColor}}
-                  aria-hidden="true"
-                >
-                </i>
-              </Header>
-              <Main>
-                <p style={{color: this.state.textColor}}>
-                  {text}
-                </p>
-              </Main>
-              <Footer color={this.state.footer}>
-                <p style={{color: this.state.textColor}}>
-                  sometext
-                </p>
-              </Footer>
+            <MainContainer>
+              <Header1>
+                <i className="fa fa-bars" aria-hidden="true"></i>
+                <p> Home </p>
+                <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
+              </Header1>
+              <Product1Main>
+                <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+                <StatusBar>
+                  <i className="fa fa-bolt" aria-hidden="true"></i> |
+                  <i className="fa fa-retweet" aria-hidden="true"></i> |
+                  <i className="fa fa-plus-circle" aria-hidden="true"></i>
+                </StatusBar>
+              </Product1Main>
+              <Footer1>
+                <i className="fa fa-refresh" aria-hidden="true"></i>
+                <i className="fa fa-cube" aria-hidden="true"></i>
+                <i className="fa fa-cog" aria-hidden="true"></i>
+              </Footer1>
             </MainContainer>
-            <img
-              src="./iphone.png"
-              className="iphoneMockUp"
-            />
+          <img
+            src="./iphone.png"
+            className="iphoneMockUp"
+          />
           </ImageContainer>
         </OuterContainer>
         <ColorControlContainer>
@@ -108,9 +116,6 @@ class MainComponent extends React.Component {
 	}
 }
 
-const text = 'Locavore kale chips edison bulb pug, twee fanny pack kombucha live-edge scenester pinterest yuccie cold-pressed. Master cleanse pitchfork hashtag, dreamcatcher';
-
 export default connect(
-	//Select your state -> props mappings here
 	({paula}) => ({paula})
 )(MainComponent);

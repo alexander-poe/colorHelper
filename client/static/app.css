@@ -16,3 +16,12 @@ label {
   height: 50%;
   width: 21%;
 }
+
+.signUp p {
+  color: gray;
+  margin: 10px;
+}
+
+.signUpOptions i {
+  padding: 3px;
+}
