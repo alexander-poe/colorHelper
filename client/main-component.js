@@ -14,7 +14,17 @@ import loremIpsum from './components/text/loremIpsum';
 import Title from './components/text/Title';
 import BasicSignUp from './components/inputs/basicSignUp';
 import NewPaula from './new-paula';
+import More from './components/containers/More';
 import Footer from './components/containers/Footer';
+import Footer1 from './components/containers/Footer1';
+import Product1Main from './components/containers/Product1Main';
+import Header1 from './components/containers/Header1';
+import StatusBar from './components/containers/widgets/statusBar';
+
+
+import MockUp1 from './components/mockups/MockUp1';
+import MockUp2 from './components/mockups/MockUp2';
+import MockUp3 from './components/mockups/MockUp3';
 
 
 
@@ -59,30 +69,19 @@ class MainComponent extends React.Component {
 		return (
 			<div>
         <MainHeader color1={this.state.header}>
+          <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
           <img className="logo" src="./logo.png" />
         </MainHeader>
         <OuterContainer>
           <ImageContainer>
-            <MainContainer color={this.state.mainContainer}>
-              <Header color1={this.state.header}>
-                <i
-                  className="fa fa-user-circle headIcon"
-                  style={{color: this.state.iconColor}}
-                  aria-hidden="true"
-                >
-                </i>
-              </Header>
-              <Main>
-                <p style={{color: this.state.textColor}}>
-                  {text}
-                </p>
-              </Main>
-              <Footer color={this.state.footer}>
-                <p style={{color: this.state.textColor}}>
-                  sometext
-                </p>
-              </Footer>
-            </MainContainer>
+            <MockUp3
+              header={this.state.header}
+              iconColor={this.state.iconColor}
+              main={this.state.mainContainer}
+              statusBar={this.state.footer}
+              textColor={this.state.textColor}
+              footer={this.state.footer}
+            />
             <img
               src="./iphone.png"
               className="iphoneMockUp"
@@ -108,9 +107,6 @@ class MainComponent extends React.Component {
 	}
 }
 
-const text = 'Locavore kale chips edison bulb pug, twee fanny pack kombucha live-edge scenester pinterest yuccie cold-pressed. Master cleanse pitchfork hashtag, dreamcatcher';
-
 export default connect(
-	//Select your state -> props mappings here
 	({paula}) => ({paula})
 )(MainComponent);
