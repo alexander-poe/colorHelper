@@ -14,15 +14,17 @@ import loremIpsum from './components/text/loremIpsum';
 import Title from './components/text/Title';
 import BasicSignUp from './components/inputs/basicSignUp';
 import NewPaula from './new-paula';
+import More from './components/containers/More';
 import Footer from './components/containers/Footer';
 import Footer1 from './components/containers/Footer1';
 import Product1Main from './components/containers/Product1Main';
-import Header1 from './components/containers/header1';
+import Header1 from './components/containers/Header1';
 import StatusBar from './components/containers/widgets/statusBar';
 
 
 import MockUp1 from './components/mockups/MockUp1';
 import MockUp2 from './components/mockups/MockUp2';
+import MockUp3 from './components/mockups/MockUp3';
 
 
 
@@ -67,34 +69,23 @@ class MainComponent extends React.Component {
 		return (
 			<div>
         <MainHeader color1={this.state.header}>
+          <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
           <img className="logo" src="./logo.png" />
         </MainHeader>
         <OuterContainer>
           <ImageContainer>
-            <MainContainer>
-              <Header1>
-                <i className="fa fa-bars" aria-hidden="true"></i>
-                <p> Home </p>
-                <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
-              </Header1>
-              <Product1Main>
-                <i className="fa fa-user-circle-o" aria-hidden="true"></i>
-                <StatusBar>
-                  <i className="fa fa-bolt" aria-hidden="true"></i> |
-                  <i className="fa fa-retweet" aria-hidden="true"></i> |
-                  <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                </StatusBar>
-              </Product1Main>
-              <Footer1>
-                <i className="fa fa-refresh" aria-hidden="true"></i>
-                <i className="fa fa-cube" aria-hidden="true"></i>
-                <i className="fa fa-cog" aria-hidden="true"></i>
-              </Footer1>
-            </MainContainer>
-          <img
-            src="./iphone.png"
-            className="iphoneMockUp"
-          />
+            <MockUp3
+              header={this.state.header}
+              iconColor={this.state.iconColor}
+              main={this.state.mainContainer}
+              statusBar={this.state.footer}
+              textColor={this.state.textColor}
+              footer={this.state.footer}
+            />
+            <img
+              src="./iphone.png"
+              className="iphoneMockUp"
+            />
           </ImageContainer>
         </OuterContainer>
         <ColorControlContainer>
