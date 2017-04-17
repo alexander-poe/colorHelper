@@ -15,6 +15,25 @@ const Controls = (props) => {
         <input onChange={props.mainContainer} type="text" value={props.mainContainerValue} />
       </label>
       <br />
+      {
+        props.MockUp3 ?
+          <div>
+            <label>
+              statusBar:
+              <input onChange={props.statusBar} type="color" value={props.statusBarValue} />
+              <input onChange={props.statusBar} type="text" value={props.statusBarValue} />
+            </label>
+            <br />
+            <label>
+              profile Container:
+              <input onChange={props.profileContainer} type="color" value={props.profileContainerValue} />
+              <input onChange={props.profileContainer} type="text" value={props.profileContainerValue} />
+            </label>
+            <br />
+          </div>
+      : null
+
+      }
       <label>
         Footer:
         <input onChange={props.footer} type="color" value={props.footerValue} />

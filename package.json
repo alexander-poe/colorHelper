@@ -36,6 +36,7 @@
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
+    "react-color": "^2.11.4",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
