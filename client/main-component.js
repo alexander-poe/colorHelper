@@ -55,35 +55,34 @@ class MainComponent extends React.Component {
   }
 
   mainContainer(e) {
-    this.setState({mainContainer: e.target.value});
+    this.setState({mainContainer: e.hex});
   }
 
   footer(e) {
-    this.setState({footer: e.target.value});
+    this.setState({footer: e.hex});
   }
 
   profileContainer(e) {
-    this.setState({profileContainer: e.target.value});
+    this.setState({profileContainer: e.hex});
   }
 
   statusBar(e) {
-    this.setState({statusBar: e.target.value});
+    this.setState({statusBar: e.hex});
   }
 
   textColor(e) {
-    this.setState({textColor: e.target.value});
+    this.setState({textColor: e.hex});
   }
 
   iconColor(e) {
-    this.setState({iconColor: e.target.value});
+    this.setState({iconColor: e.hex});
   }
 
 	render() {
 		return (
 			<div>
         <MainHeader color1={this.state.header}>
-          <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
-          <img className="logo" src="./logo.png" />
+          <img className="logo" src="./color-wheel.svg" />
         </MainHeader>
         <OuterContainer>
           <ImageContainer>
@@ -119,10 +118,6 @@ class MainComponent extends React.Component {
             profileContainerValue={this.state.profileContainer}
             statusBar={this.statusBar}
             statusBarValue={this.state.statusBar}
-          />
-          <SketchPicker
-            color={this.state.header}
-            onChangeComplete={this.header}
           />
         </ColorControlContainer>
 
