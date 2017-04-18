@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { SketchPicker } from 'react-color';
 import styled from 'styled-components';
 import MainContainer from './components/containers/MainContainer';
 import ColorControlContainer from './components/containers/ColorControlContainer';
@@ -32,45 +33,56 @@ class MainComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      header: '#37d5d8',
+      header: '#873447',
       mainContainer: '#64f8f1',
       footer: '#873447',
       textColor: '#000000',
-      iconColor: '#fff'
+      iconColor: '#fff',
+      statusBar: '#000000',
+      profileContainer: '#873447',
     };
     this.header = this.header.bind(this);
     this.mainContainer = this.mainContainer.bind(this);
     this.footer = this.footer.bind(this);
+    this.statusBar = this.statusBar.bind(this);
+    this.profileContainer = this.profileContainer.bind(this);
     this.textColor = this.textColor.bind(this);
     this.iconColor = this.iconColor.bind(this);
   }
 
   header(e) {
-    this.setState({header: e.target.value});
+    this.setState({header: e.hex});
   }
 
   mainContainer(e) {
-    this.setState({mainContainer: e.target.value});
+    this.setState({mainContainer: e.hex});
   }
 
   footer(e) {
-    this.setState({footer: e.target.value});
+    this.setState({footer: e.hex});
+  }
+
+  profileContainer(e) {
+    this.setState({profileContainer: e.hex});
+  }
+
+  statusBar(e) {
+    this.setState({statusBar: e.hex});
   }
 
   textColor(e) {
-    this.setState({textColor: e.target.value});
+    this.setState({textColor: e.hex});
   }
 
   iconColor(e) {
-    this.setState({iconColor: e.target.value});
+    this.setState({iconColor: e.hex});
   }
 
 	render() {
 		return (
 			<div>
         <MainHeader color1={this.state.header}>
-          <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
-          <img className="logo" src="./logo.png" />
+          <img className="logo" src="./color-wheel.svg" />
         </MainHeader>
         <OuterContainer>
           <ImageContainer>
@@ -78,7 +90,8 @@ class MainComponent extends React.Component {
               header={this.state.header}
               iconColor={this.state.iconColor}
               main={this.state.mainContainer}
-              statusBar={this.state.footer}
+              statusBar={this.state.statusBar}
+              profileContainer={this.state.profileContainer}
               textColor={this.state.textColor}
               footer={this.state.footer}
             />
@@ -90,6 +103,7 @@ class MainComponent extends React.Component {
         </OuterContainer>
         <ColorControlContainer>
           <Controls
+            MockUp3={true}
             header={this.header}
             headerValue={this.state.header}
             mainContainer={this.mainContainer}
@@ -100,8 +114,13 @@ class MainComponent extends React.Component {
             textColorValue={this.state.textColor}
             iconColor={this.iconColor}
             iconColorValue={this.state.iconColor}
+            profileContainer={this.profileContainer}
+            profileContainerValue={this.state.profileContainer}
+            statusBar={this.statusBar}
+            statusBarValue={this.state.statusBar}
           />
         </ColorControlContainer>
+
 			</div>
 		);
 	}

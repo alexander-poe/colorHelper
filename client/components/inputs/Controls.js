@@ -1,39 +1,41 @@
 import React from 'react';
+import { SketchPicker } from 'react-color';
 
-const Controls = (props) => {
-  return (
-    <div>
-      <label>
-        Header:
-        <input onChange={props.header} type="color" value={props.headerValue} />
-        <input onChange={props.header} type="text" value={props.headerValue} />
-      </label>
-      <br />
-      <label>
-        Container:
-        <input onChange={props.mainContainer} type="color" value={props.mainContainerValue} />
-        <input onChange={props.mainContainer} type="text" value={props.mainContainerValue} />
-      </label>
-      <br />
-      <label>
-        Footer:
-        <input onChange={props.footer} type="color" value={props.footerValue} />
-        <input onChange={props.footer} type="text" value={props.footerValue} />
-      </label>
-      <br />
-      <label>
-        Txt Color:
-        <input onChange={props.textColor} type="color" value={props.textColorValue} />
-        <input onChange={props.textColor} type="text" value={props.textColorValue} />
-      </label>
-      <br />
-      <label>
-        Icon Color:
-        <input onChange={props.iconColor} type="color" value={props.iconColorValue} />
-        <input onChange={props.iconColor} type="text" value={props.iconColorValue} />
-      </label>
-    </div>
-  );
-};
+class Controls extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentKey: 0
+    };
+  }
+  changeColorControls(e) {
+    this.setState({currentKey: e.target.value});
+  }
+
+  render() {
+    const keys = [
+      this.props.mainContainer, this.props.header, this.props.profileContainer, this.props.statusBar,
+      this.props.footer, this.props.iconColor, this.props.textColor
+    ];
+    return (
+      <div>
+        <select id="select" onChange={this.changeColorControls.bind(this)}>
+          <option value={0}>Main Container</option>
+          <option value={1}>Header</option>
+          <option value={2}>Profile Container</option>
+          <option value={3}>Status Bar</option>
+          <option value={4}>Footer</option>
+          <option value={5}>Icon Color</option>
+          <option value={6}>Text Color</option>
+        </select>
+        <SketchPicker
+          style={{backgroundColor: '#1E7BD8'}}
+          color={'#1E7BD8'}
+          onChangeComplete={keys[this.state.currentKey]}
+        />
+      </div>
+    );
+  }
+}
 
 export default Controls;

@@ -14,7 +14,7 @@ const MockUp3 = (props) => {
           <p style={{color: props.textColor}}> Home </p>
           <i className="fa fa-pencil-square-o" style={{color: props.iconColor}}aria-hidden="true"></i>
         </Header1>
-        <Product1Main color={props.header}>
+        <Product1Main color={props.profileContainer}>
             <i className="fa fa-user-circle-o" style={{color: props.iconColor}}aria-hidden="true"></i>
             <StatusBar color={props.statusBar}>
               <i className="fa fa-bolt" style={{color: props.iconColor}}aria-hidden="true"></i> |

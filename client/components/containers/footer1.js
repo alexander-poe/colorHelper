@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Footer1 = styled.div`
   position: absolute;
-  background: ${props => props.color}
+  background-color: ${props => props.color}
   display: flex;
   justify-content: space-around;
   padding-top: 14px;
