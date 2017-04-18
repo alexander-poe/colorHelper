@@ -17,9 +17,9 @@ import BasicSignUp from './components/inputs/basicSignUp';
 import NewPaula from './new-paula';
 import More from './components/containers/More';
 import Footer from './components/containers/Footer';
-import Footer1 from './components/containers/Footer1';
+import Footer1 from './components/containers/footer1';
 import Product1Main from './components/containers/Product1Main';
-import Header1 from './components/containers/Header1';
+import Header1 from './components/containers/header1';
 import StatusBar from './components/containers/widgets/statusBar';
 
 
