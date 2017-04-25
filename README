@@ -1,15 +1,20 @@
-https://color-helper.herokuapp.com/
+## Color Helper
 
-Next Steps:
+I made this app because I find using dev tools or color palates to pick colors to be slow. This is a much quicker way to find the right fit of colors
+for your personal project or app. This app using 'styled-components' which using inline styles to kick off clean, reusable and dynamic components.
 
-I'd like to make generic product mockups, like insta, facebook, linked, ect.. 
+<img src="colorHelperode.png">
+example of 'styled-components'
 
-The current screen that the site displays will toggle between controls and views for different product mockups. 
+<img src="Screen Shot 2017-04-18 at 1.20.40 PM_imac2015_front.png">
+
+## Next 
+
+Moving forward I have created some product mockups to be implmented into different color customizations views.
 
 
-Created to help pick a color scheme for a website without the use of dev tools. Further step to this could be to create some type of click and create site maker. 
-For my purposes I have no need for the technology but I could however see the ability to manipulate height and width of elements as well as different views for the color picker.
 
+## Get started
 
 To build: npm run build
 
